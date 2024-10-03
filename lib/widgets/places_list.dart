@@ -12,14 +12,16 @@ class PlacesList extends StatelessWidget {
         child: Text('No places yet!'),
       );
     }
-    return ListView.builder(itemBuilder: (context, index) {
-      final place = places[index];
-      return ListTile(
-        title: Text(place.title,
-            style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                  color: Theme.of(context).colorScheme.onSurface,
-                )),
-      );
-    });
+    return ListView.builder(
+        itemCount: places.length,
+        itemBuilder: (context, index) {
+          final place = places[index];
+          return ListTile(
+            title: Text(place.title,
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                      color: Theme.of(context).colorScheme.onSurface,
+                    )),
+          );
+        });
   }
 }
