@@ -16,6 +16,16 @@ class PlacesDetailScreen extends StatelessWidget {
               ),
         ),
       ),
+      body: Stack(
+        children: [
+          Image.file(
+            place.image,
+            width: double.infinity,
+            height: double.infinity,
+            fit: BoxFit.cover,
+          )
+        ],
+      ),
     );
   }
 }
